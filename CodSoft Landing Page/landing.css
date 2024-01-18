@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&family=Lora:ital@0;1&family=Open+Sans&family=Pacifico&family=Roboto:wght@300&family=Rubik+Doodle+Shadow&family=Sofia&family=Source+Code+Pro:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: aqua;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1{
+    padding-left: 20px;
+    color: rgb(148, 9, 118);
+    margin-bottom: 5px;
+    font-size: 50px;
+    font-family: 'Sofia', cursive;
+    text-align:center;
+}
+hr{
+   border-color:rgb(148, 9, 118);
+   margin-bottom: 5px;
+   border-width: 10px;
+}
+.logo{
+    max-height: 150px;
+    padding-left: -10px;
+}
+nav{
+    padding-left: 5px;
+    margin-top: 0px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    font-size: 25px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    margin: 5px;
+}
+nav ul li a{
+    color:rgb(148, 9, 118);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width:0;
+    height: 3px;
+    background:rgb(148, 9, 118);
+    position:absolute;
+    left: 0;
+    bottom: -5px;
+    transition:0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav button{
+    display: block;
+    margin: 50px;
+    color:white;
+    font:bold;
+    background: rgb(148, 9, 118);
+    width: fit-content;
+    text-decoration: none;
+    padding:10px 25px;
+    border-radius: 20px;
+    transition :background 0.5s, transform 0.3s ease-in-out;
+    animation: pulse 0.5s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+nav button:hover {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(10, 41, 153, 0.251));
+    animation: none;
+    transform: translateY(-5px);
+}
+
+/*about*/
+#about{
+    padding: 80px 10px;
+}
+.about h2{
+    padding-left: 20px;
+    color: rgb(148, 9, 118);
+    font-family: 'Sofia', cursive;
+}
+
+.about-column-1 h2{
+    animation: fadeInUp 1s ease-out;
+    color:rgb(148, 9, 118);
+    margin-bottom:30px;
+    /*padding-bottom: 30px;*/
+}
+.about-column-1 img{
+    max-height: 600px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    border-radius: 10%;
+}
+.about-column-1 i{
+    padding-left: 40px;
+    font-size: 60px;
+    color: rgb(148, 9, 118);
+}
+.about-column-2 h3{
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    color: rgb(148, 9, 118); 
+}
+.about ul{
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.about-column-2 span{
+    font-size: 18px;
+    font-family: 'Sofia', cursive;
+    font-weight: bold;
+    color: rgb(148, 9, 118);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap
+}
+.about-column-1{
+    flex-basis: 35%;
+}
+.about-column-2{
+    flex-basis: 65%;
+}
+
+/*Must-Visit*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#places-to-visit h2 {
+    animation: fadeInUp 1s ease-out;
+    color: rgb(166, 13, 133);
+    font-family: 'Sofia', cursive;
+}
+#places-to-visit{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+}
+.places-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.place{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.place img{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition:transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.497), #dad2da);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 65px 30px;
+    text-align:center;
+    font-size: 15px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: bolder;
+    font-size: 15px;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    color: rgb(166, 13, 133);
+}
+.layer p{
+    font-weight: bold;
+    font-size: 10px;
+    margin-top: 0;
+    margin-bottom: 43px;
+    color: rgb(166, 13, 133);
+}
+.place:hover img{
+    transform:scale(1.1);
+}
+.place:hover .layer{
+    height:100%;
+}
+
+/*reach us section*/
+.contact-left{
+    flex-basis:35%;
+    padding-left: 20px;
+}
+.contact-left h2{
+    animation: fadeInUp 1s ease-out;
+    font: bold;
+    color: rgb(166, 13, 133);
+    font-family: 'Sofia', cursive;
+}
+.contact-right{
+    flex-basis:60%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.contact-right p{
+    margin-top: 30px;
+    color:rgb(166, 13, 133);
+    font-weight: bold;
+}
+.contact-right p:hover{
+    color: rgb(4, 0, 255);
+    transform: translateY(-5px);
+}
+.contact-right p i{
+    color:rgb(166, 13, 133);
+    margin-right:15px;
+    font-size: 25px;
+}
+.contact-right p i:hover{
+    color: rgb(4, 0, 255);
+    transform: translateY(-5px);
+}
+.social-media-icons{
+    margin: 30px;
+}
+.social-media-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 10px;
+    color: rgb(166, 13, 133);
+    display: inline-block;
+}
+.social-media-icons a:hover{
+    color:  rgb(4, 0, 255);
+    transform: translateY(-5px);
+}
+.contact-left form button{
+    margin-top: 5px;
+    background: rgb(166, 13, 133);
+    
+}
+.contact-left form{
+    width: 100%;
+}
+form input{
+    width:100%;
+    border-radius: 5px;
+    border:3px solid rgb(166, 13, 133);
+    background:rgba(9, 176, 176, 0.321);
+    padding:10px;
+    margin: 8px 0;
+    color:rgb(148, 9, 118);
+    font-size: 14px;
+}
+form button{
+    display: block;
+    margin: 50px;
+    color:white;
+    font:bold;
+    background: rgb(148, 9, 118);
+    width: fit-content;
+    text-decoration: none;
+    padding:10px 25px;
+    border-radius: 20px;
+    transition :background 0.5s;
+}
+form button:hover {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(10, 41, 153, 0.251));
+    transform: translateY(-5px);
+}
+.copyright{
+    width:100%;
+    color:rgb(148, 9, 118);
+    margin-top:5px;
+    font-weight: bold;
+    background: #031c4836;
+    text-align: center;
+    padding:10px
+}
+
+/* Responsive*/
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 30px;
+    }
+    .logo{
+        max-height: 140px; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    nav ul li{
+        display:block;
+        margin:10px;
+        font-size: 18px;
+    }
+    nav button {
+        margin: 10px;
+        font-size: 14px;
+    }
+    .about-column-1, .about-column-2{
+        flex-basis: 100%;
+    }
+    .about-column-1 i {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 40px;
+        display: block; 
+    }
+    .about-column-2 {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .about-column-2 .span{
+        font-size:30px;
+        font-weight: bold;
+    }
+    .about-column-2 h3 {
+        padding-bottom: 20px;
+        font-size: 25px;
+    }
+    .places-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+    .place img {
+        max-height: 150px;
+    }
+    .layer h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .layer p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .layer a {
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .contact-left form button {
+        margin-top: 10px;
+    }
+    .social-media-icons a {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    form button {
+        margin: 20px;
+        font-size: 14px;
+    }
+    .copyright {
+        font-size: 12px;
+    }
+}

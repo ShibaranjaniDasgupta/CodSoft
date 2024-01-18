@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    background-color: #1e1e1e; /* Dark background color */
+}
+
+.calculator {
+    background-color: #232323; /* Calculator color */
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    padding:5px;
+}
+
+.display {
+    height:60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: right;
+    padding: 5px;
+    margin: 10px;
+    background-color: #40404052; /* Display background color */
+    color: #4ba961; /* Display text color */
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:2px;
+    width:100%;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    justify-content: space-around;
+}
+
+button {
+    background-color: #40404052;
+    color: #41ac5c;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    width: 75px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button.equal {
+    background-color: #186b2d;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #12401f; /* Darker green button color on hover */
+}
+
+.cursor {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 2px;
+    height: 40px;
+    background-color: #4ba961; /* Cursor color */
+    animation: blink 1s infinite step-start;
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
